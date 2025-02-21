@@ -3,37 +3,15 @@
     "tasksRunnerOptions": {
         "default": {
             "runner": "@nx/workspace/tasks-runners/default",
-            "options": {
-                "cacheableOperations": ["build", "test", "test:eslint", "package", "prepare", "build:travis"]
-            }
+            "options": { "cacheableOperations": ["build", "test", "test:eslint", "package", "prepare", "build:travis"] }
         }
     },
     "targetDependencies": {
-        "build": [
-            {
-                "target": "build",
-                "projects": "dependencies"
-            }
-        ],
-        "prepare": [
-            {
-                "target": "prepare",
-                "projects": "dependencies"
-            }
-        ],
-        "package": [
-            {
-                "target": "package",
-                "projects": "dependencies"
-            }
-        ]
+        "build": [{ "target": "build", "projects": "dependencies" }],
+        "prepare": [{ "target": "prepare", "projects": "dependencies" }],
+        "package": [{ "target": "package", "projects": "dependencies" }]
     },
-    "affected": {
-        "defaultBase": "master"
-    },
-    "pluginsConfig": {
-        "@nx/js": {
-            "analyzeSourceFiles": false
-        }
-    }
+    "affected": { "defaultBase": "master" },
+    "pluginsConfig": { "@nx/js": { "analyzeSourceFiles": false } },
+    "nxCloudId": "67b89a7b1035e4e37fb09450"
 }
